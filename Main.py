@@ -1,8 +1,8 @@
 import os
 class Stack:
     def __init__(self, size):
-        self.items = [none]*size
         self.size = size
+        self.items=[None]*size
         self.top=-1;
 
     def is_empty(self):
@@ -15,7 +15,7 @@ class Stack:
         if not self.is_full():
             self.top+=1
             self.items[self.top]=data
-
+            
     def pop(self):
         if not self.is_empty():
             x=self.items[self.top]
@@ -23,7 +23,7 @@ class Stack:
 
     def status(self):
         for i in range(self.top+1):
-            print(self.items[i])
+            print(self.items[i]) 
 
 # Do not change the following code
 size, queries = map(int, input().rstrip().split())
